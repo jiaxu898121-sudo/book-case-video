@@ -1,0 +1,6 @@
+interface:
+  display_name: "书籍蒸馏与案例视频"
+  short_description: "把书中方法转为原创生活案例，校验口语与证据，并生成统一封面和有声视频"
+  default_prompt: "使用 $book-case-video 把下一本书制作成带统一封面、中文对话、英文字幕的案例讲解视频，并附口语校验记录。"
+policy:
+  allow_implicit_invocation: true

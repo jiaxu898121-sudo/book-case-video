@@ -1,0 +1,403 @@
+{
+  "episode": 5,
+  "slug": "intimate-relationships",
+  "book": {
+    "title": "亲密关系 · Intimate Relationships",
+    "author": "Rowland S. Miller",
+    "coverage": "selected_topics"
+  },
+  "sources": [
+    {
+      "id": "publisher",
+      "kind": "publisher",
+      "locator": "https://www.mheducation.com/highered/product/Intimate-Relationships-Miller.html",
+      "read_scope": "教材介绍与目录：沟通、社会认知、关系维护；未读取全书",
+      "verification": "checked"
+    },
+    {
+      "id": "responsiveness",
+      "kind": "research",
+      "locator": "https://sites.rochester.edu/reis/research/",
+      "read_scope": "Intimacy, Closeness, and Responsiveness研究框架",
+      "verification": "checked"
+    },
+    {
+      "id": "shared-activities",
+      "kind": "research",
+      "locator": "https://pubmed.ncbi.nlm.nih.gov/10707334/",
+      "read_scope": "论文摘要；问卷、调查与短时实验的条件与结果",
+      "verification": "checked"
+    }
+  ],
+  "claims": [
+    {
+      "id": "different-questions",
+      "text": "吸引、爱与关系维护是不同的研究议题；本期只选择相处与日常维护",
+      "type": "research",
+      "source_ids": [
+        "publisher"
+      ],
+      "conditions": "关系研究的主题划分，不代表全书摘要",
+      "limits": "未据此承诺任何特定表达都能改善关系"
+    },
+    {
+      "id": "responsive-listening",
+      "text": "分享得到理解、重视与关心时，可能体验到更亲近",
+      "type": "research",
+      "source_ids": [
+        "responsiveness"
+      ],
+      "conditions": "关注分享者如何感知回应，具体互动和文化情境会影响体验",
+      "limits": "不能推论一个固定句式适合所有人或能修复所有关系"
+    },
+    {
+      "id": "novel-activities",
+      "text": "共同新鲜活动在部分实验条件下改善当下关系体验",
+      "type": "research",
+      "source_ids": [
+        "shared-activities"
+      ],
+      "conditions": "研究包含问卷、调查与短时共同活动实验",
+      "limits": "不能承诺长期效果或代替处理长期冲突"
+    }
+  ],
+  "output": {
+    "delivery_dir": ""
+  },
+  "style": {
+    "series_name": "读懂关系的100本书",
+    "cover_seconds": 2,
+    "fps": 30,
+    "width": 720,
+    "height": 1280,
+    "accent": "#ff642d",
+    "background": "#11120f",
+    "cream": "#f4ecd9"
+  },
+  "cover": {
+    "lead_lines": [
+      "明明还相爱",
+      "为什么"
+    ],
+    "keyword": "越走越远？",
+    "tag_zh": "相爱与相处",
+    "tag_en": "INTIMACY",
+    "subtitle_lines": [
+      "住在一起，",
+      "不等于真的走进彼此。"
+    ]
+  },
+  "music": {
+    "path": "",
+    "provenance": "示例未打包音轨；沿用当前项目时可显式指定已确认的原创配乐文件",
+    "volume": 0.24
+  },
+  "reviews": {
+    "source": {
+      "status": "passed",
+      "notes": "已核对上述公开来源，范围限所选议题；案例与建议句为原创改写"
+    },
+    "oral": {
+      "status": "passed",
+      "notes": "已在第五期校验抽象术语、称谓、具体请求与绝对化表述；记录见用户已交付口语报告"
+    },
+    "translation": {
+      "status": "passed",
+      "notes": "逐句中文对应英文，保留情态与限制；字幕段内切分为估算时序"
+    }
+  },
+  "scenes": [
+    {
+      "id": "scene-1",
+      "ey_zh": "日常对话",
+      "ey_en": "EVERYDAY TALK",
+      "title_lines": [
+        "明明还相爱，",
+        "怎么越走越远？"
+      ],
+      "layout": "compare",
+      "nodes": [
+        "你最近都不跟我说话",
+        "可我每天都跟你在一起啊"
+      ],
+      "claim_ids": [
+        "different-questions"
+      ],
+      "case_kind": "original",
+      "case_source_id": "",
+      "summary": "本期原创案例与解释，不是原书引文",
+      "lines": [
+        {
+          "id": "line-1",
+          "speaker": "A",
+          "zh": "你最近怎么都不跟我说话？",
+          "en": "Why do we hardly talk anymore?",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "duration_sec": 2.28
+        },
+        {
+          "id": "line-2",
+          "speaker": "B",
+          "zh": "我不是每天都跟你在一起吗？",
+          "en": "But I am with you every day.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 2.496
+        },
+        {
+          "id": "line-3",
+          "speaker": "narrator",
+          "zh": "一个想聊聊心里话，一个觉得自己已经陪着。两个人都觉得委屈，话就卡在这儿了。",
+          "en": "One wants to talk. The other feels that being there should be enough. Both feel hurt, and the conversation stalls.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 7.56
+        }
+      ]
+    },
+    {
+      "id": "scene-2",
+      "ey_zh": "本期视角",
+      "ey_en": "THE BIG PICTURE",
+      "title_lines": [
+        "相爱之后，",
+        "关系靠什么维持？"
+      ],
+      "layout": "triad",
+      "nodes": [
+        "靠近：愿意分享心里话",
+        "回应：让对方感到被理解",
+        "维护：在日常中一起投入"
+      ],
+      "claim_ids": [
+        "different-questions"
+      ],
+      "case_kind": "original",
+      "case_source_id": "",
+      "summary": "本期原创案例与解释，不是原书引文",
+      "lines": [
+        {
+          "id": "line-1",
+          "speaker": "narrator",
+          "zh": "罗兰·米勒的亲密关系，是一本介绍关系研究的教材。它提醒我们，吸引、相爱和长久相处，是不同的问题。",
+          "en": "Rowland Miller’s Intimate Relationships surveys relationship science. Attraction, love, and staying close are different questions.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 10.032
+        },
+        {
+          "id": "line-2",
+          "speaker": "narrator",
+          "zh": "这一集只挑一个角度：日子过久了，两个人怎么继续靠近，而不只是住在一起。",
+          "en": "This episode focuses on one question: how do partners stay close, rather than simply share a home?",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 6.504
+        }
+      ]
+    },
+    {
+      "id": "scene-3",
+      "ey_zh": "分享与回应",
+      "ey_en": "SHARING AND RESPONSE",
+      "title_lines": [
+        "陪在旁边，",
+        "也要接得住话"
+      ],
+      "layout": "compare",
+      "nodes": [
+        "有啥好烦的，别想那么多",
+        "怎么了？说说看，我听着"
+      ],
+      "claim_ids": [
+        "responsive-listening"
+      ],
+      "case_kind": "original",
+      "case_source_id": "",
+      "summary": "本期原创案例与解释，不是原书引文",
+      "lines": [
+        {
+          "id": "line-1",
+          "speaker": "A",
+          "zh": "我今天被领导说了，心里挺堵的。",
+          "en": "My boss criticized me today. I feel awful.",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "duration_sec": 3.096
+        },
+        {
+          "id": "line-2",
+          "speaker": "B",
+          "zh": "怎么了？你先说，我听着。",
+          "en": "What happened? Tell me. I am listening.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 3.336
+        },
+        {
+          "id": "line-3",
+          "speaker": "narrator",
+          "zh": "让人觉得亲近的，不光是说了多少，而是说完以后，觉得自己被听见、被在乎。你也可以问，现在想让我听，还是一起想办法？",
+          "en": "Closeness depends not just on sharing, but on feeling heard and cared for. Ask whether they want a listener or help finding a solution.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 10.776
+        }
+      ]
+    },
+    {
+      "id": "scene-4",
+      "ey_zh": "事实与猜测",
+      "ey_en": "FACTS AND ASSUMPTIONS",
+      "title_lines": [
+        "先问发生了什么，",
+        "别急着判定不在乎"
+      ],
+      "layout": "compare",
+      "nodes": [
+        "半天没回消息＝不在乎我",
+        "先问情况，再说自己的担心"
+      ],
+      "claim_ids": [
+        "different-questions"
+      ],
+      "case_kind": "original",
+      "case_source_id": "",
+      "summary": "本期原创案例与解释，不是原书引文",
+      "lines": [
+        {
+          "id": "line-1",
+          "speaker": "narrator",
+          "zh": "比如，对方半天没回消息。我们很容易从没回复，一下跳到他根本不在乎我。",
+          "en": "When a message goes unanswered, it is easy to jump from no reply to they do not care.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 6.6
+        },
+        {
+          "id": "line-2",
+          "speaker": "narrator",
+          "zh": "可以换成：下午一直没联系上你，我有点担心，你刚才在忙什么？先把情况问清楚，再谈以后怎么联系。",
+          "en": "Try: I could not reach you this afternoon and felt worried. What was going on? Then discuss how to stay in touch.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 9.84
+        }
+      ]
+    },
+    {
+      "id": "scene-5",
+      "ey_zh": "把冲突说具体",
+      "ey_en": "MAKE CONFLICT SPECIFIC",
+      "title_lines": [
+        "少一点翻旧账，",
+        "多一点具体商量"
+      ],
+      "layout": "compare",
+      "nodes": [
+        "你从来都不管这个家",
+        "今晚碗你洗，还是我洗？"
+      ],
+      "claim_ids": [
+        "different-questions"
+      ],
+      "case_kind": "original",
+      "case_source_id": "",
+      "summary": "本期原创案例与解释，不是原书引文",
+      "lines": [
+        {
+          "id": "line-1",
+          "speaker": "A",
+          "zh": "你怎么从来都不管这个家？",
+          "en": "Why do I have to do everything at home?",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "duration_sec": 2.328
+        },
+        {
+          "id": "line-2",
+          "speaker": "A",
+          "zh": "我今天有点累，晚饭后的碗你来洗，行吗？",
+          "en": "I am tired today. Could you wash the dishes after dinner?",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "duration_sec": 3.888
+        },
+        {
+          "id": "line-3",
+          "speaker": "narrator",
+          "zh": "把不满落到一件具体的事上，会更容易商量。要是两个人都上头了，可以先缓一缓，再约个时间接着聊。",
+          "en": "A specific issue is easier to discuss. If you are both overwhelmed, pause and agree on a time to come back to it.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 8.304
+        }
+      ]
+    },
+    {
+      "id": "scene-6",
+      "ey_zh": "一起过日子",
+      "ey_en": "SHARED EXPERIENCES",
+      "title_lines": [
+        "一起做点新鲜的，",
+        "别只剩安排和分工"
+      ],
+      "layout": "compare",
+      "nodes": [
+        "每天只聊：吃啥、买啥、谁接娃",
+        "挑一件双方都想试的小事"
+      ],
+      "claim_ids": [
+        "novel-activities"
+      ],
+      "case_kind": "original",
+      "case_source_id": "",
+      "summary": "本期原创案例与解释，不是原书引文",
+      "lines": [
+        {
+          "id": "line-1",
+          "speaker": "narrator",
+          "zh": "还有一个容易被忘掉的部分：一起过日子，别只剩下待办清单。也留点时间，做件双方都想试的小事。",
+          "en": "Life together can become a to-do list. Make room for a small experience you both want to try.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 8.136
+        },
+        {
+          "id": "line-2",
+          "speaker": "narrator",
+          "zh": "有研究发现，共同参与新鲜、有趣的活动，能在一定条件下改善当下的关系体验。但它不是解决长期矛盾的万能办法。",
+          "en": "Research suggests shared novel activities can improve immediate relationship experiences under some conditions. They are not a cure for ongoing problems.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 10.2
+        }
+      ]
+    },
+    {
+      "id": "scene-7",
+      "ey_zh": "今天的小练习",
+      "ey_en": "ONE SMALL STEP",
+      "title_lines": [
+        "先留十分钟，",
+        "好好听对方说说"
+      ],
+      "layout": "steps",
+      "nodes": [
+        "找个双方都方便的时间",
+        "问问：最近有什么开心或烦心的？",
+        "先听完，再商量能做什么"
+      ],
+      "claim_ids": [
+        "different-questions"
+      ],
+      "case_kind": "original",
+      "case_source_id": "",
+      "summary": "本期原创案例与解释，不是原书引文",
+      "lines": [
+        {
+          "id": "line-1",
+          "speaker": "narrator",
+          "zh": "今天不妨找个都方便的时间，留十分钟，问问对方，最近有没有什么开心的，或者烦心的？先别急着给建议。",
+          "en": "Find a time that works for both of you. Spend ten minutes asking what has felt good or difficult lately. Do not rush into advice.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 8.64
+        },
+        {
+          "id": "line-2",
+          "speaker": "narrator",
+          "zh": "这些练习需要双方参与。关系里如果长期只有一个人在努力，就得认真谈谈彼此的投入，而不是让一个人把话说得更好。",
+          "en": "These practices take two people. If one person is always doing the work, discuss that imbalance rather than asking them to communicate even better.",
+          "voice": "zh-CN-YunxiNeural",
+          "duration_sec": 11.112
+        }
+      ]
+    }
+  ]
+}

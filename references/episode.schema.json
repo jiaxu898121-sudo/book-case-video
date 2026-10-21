@@ -1,0 +1,498 @@
+{
+  "type": "object",
+  "properties": {
+    "episode": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 999
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "book": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "coverage": {
+          "enum": [
+            "selected_topics",
+            "whole_book"
+          ]
+        }
+      },
+      "required": [
+        "title",
+        "author",
+        "coverage"
+      ],
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "kind": {
+            "enum": [
+              "full_text",
+              "excerpt",
+              "author",
+              "publisher",
+              "research",
+              "other"
+            ]
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "read_scope": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "verification": {
+            "enum": [
+              "pending",
+              "checked"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "locator",
+          "read_scope",
+          "verification"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "type": {
+            "enum": [
+              "research",
+              "author_model",
+              "practice",
+              "philosophy"
+            ]
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            "minItems": 1
+          },
+          "conditions": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "limits": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "id",
+          "text",
+          "type",
+          "source_ids",
+          "conditions",
+          "limits"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "delivery_dir": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "delivery_dir"
+      ],
+      "additionalProperties": false
+    },
+    "style": {
+      "type": "object",
+      "properties": {
+        "series_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "cover_seconds": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "fps": {
+          "const": 30
+        },
+        "width": {
+          "const": 720
+        },
+        "height": {
+          "const": 1280
+        },
+        "accent": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "background": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "cream": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        }
+      },
+      "required": [
+        "series_name",
+        "cover_seconds",
+        "fps",
+        "width",
+        "height",
+        "accent",
+        "background",
+        "cream"
+      ],
+      "additionalProperties": false
+    },
+    "cover": {
+      "type": "object",
+      "properties": {
+        "lead_lines": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "keyword": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "tag_zh": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "tag_en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "subtitle_lines": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "lead_lines",
+        "keyword",
+        "tag_zh",
+        "tag_en",
+        "subtitle_lines"
+      ],
+      "additionalProperties": false
+    },
+    "music": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "volume": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.5
+        }
+      },
+      "required": [
+        "path",
+        "provenance",
+        "volume"
+      ],
+      "additionalProperties": false
+    },
+    "reviews": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed"
+              ]
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "status",
+            "notes"
+          ],
+          "additionalProperties": false
+        },
+        "oral": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed"
+              ]
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "status",
+            "notes"
+          ],
+          "additionalProperties": false
+        },
+        "translation": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed"
+              ]
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "status",
+            "notes"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "source",
+        "oral",
+        "translation"
+      ],
+      "additionalProperties": false
+    },
+    "scenes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "ey_zh": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "ey_en": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "title_lines": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "layout": {
+            "enum": [
+              "compare",
+              "triad",
+              "steps"
+            ]
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "minItems": 2
+          },
+          "claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            "minItems": 1
+          },
+          "case_kind": {
+            "enum": [
+              "original",
+              "book",
+              "research"
+            ]
+          },
+          "case_source_id": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                },
+                "speaker": {
+                  "enum": [
+                    "narrator",
+                    "A",
+                    "B"
+                  ]
+                },
+                "zh": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "en": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "voice": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "duration_sec": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "id",
+                "speaker",
+                "zh",
+                "en",
+                "voice",
+                "duration_sec"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "ey_zh",
+          "ey_en",
+          "title_lines",
+          "layout",
+          "nodes",
+          "claim_ids",
+          "case_kind",
+          "case_source_id",
+          "summary",
+          "lines"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "episode",
+    "slug",
+    "book",
+    "sources",
+    "claims",
+    "output",
+    "style",
+    "cover",
+    "music",
+    "reviews",
+    "scenes"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:book-case-video:episode",
+  "title": "Book case video episode"
+}
