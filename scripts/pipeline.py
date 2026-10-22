@@ -30,8 +30,8 @@ def check(p,ready=False):
  if ready and any(x['status']!='passed' for x in d['reviews'].values()): raise ValueError('Source, oral, and translation reviews must actually be completed before production')
  return d
 
-def run(cmd):
- r=subprocess.run([str(x) for x in cmd],capture_output=True)
+def run(cmd,cwd=None):
+ r=subprocess.run([str(x) for x in cmd],capture_output=True,cwd=cwd)
  if r.returncode: raise RuntimeError(r.stderr.decode('utf-8',errors='replace')[-4000:])
  return r.stdout
 
@@ -141,7 +141,7 @@ def render(a):
  if not cli.is_file(): raise ValueError('Install the pinned project dependencies first; this command does not download them')
  cmd=[a.node,cli,'render',project/'src/index.tsx','BookCaseVideo',temp,'--codec=h264','--concurrency='+str(a.concurrency)]
  if a.browser: cmd+=['--chrome-mode=chrome-for-testing','--browser-executable='+a.browser]
- run(cmd)
+ run(cmd,cwd=project)
  meta=json.loads(run([a.ffprobe,'-v','error','-show_entries','format=duration,size:stream=codec_type,width,height','-of','json',temp]))
  video=next(x for x in meta['streams'] if x['codec_type']=='video');duration=float(meta['format']['duration']);expected=data['total_frames']/d['style']['fps']
  if (video['width'],video['height'])!=(d['style']['width'],d['style']['height']) or abs(duration-expected)>.25: raise ValueError('Output dimensions or duration mismatch')
